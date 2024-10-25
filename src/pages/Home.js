@@ -6,10 +6,11 @@ import Inventory from "../components/Inventory";
 import AddInventory from "../components/AddInventory";
 import Billing from "../components/Billing";
 import Category from "../components/Category";
+import Calculator from "../components/Calculator";
 
 const Home = () => {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [activeComponent, setActiveComponent] = useState("AddInventory"); // Default component
+  const [activeComponent, setActiveComponent] = useState("Dashboard"); // Default component
 
   const toggleSidebar = () => {
     setSidebarOpen(!sidebarOpen);
@@ -28,8 +29,10 @@ const Home = () => {
         return <Billing />;
       case "Category":
         return <Category />;
+      case "Calculator":
+        return <Calculator/>;
       default:
-        return <AddInventory />;
+        return <Dashboard />;
     }
   };
 

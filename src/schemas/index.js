@@ -23,7 +23,7 @@ export const AddInventorySchema = Yup.object({
     mrp: Yup.number().required('Required').positive('Must be a positive number'),
     cost_price: Yup.number().required('Required').positive('Must be a positive number'),
     selling_price: Yup.number().required('Required').positive('Must be a positive number').min(Yup.ref('cost_price'), 'Selling price must be greater than cost price'),
-    unit_id:Yup.string().required("Enter unit"),
+    unit_id:Yup.number().required("Enter unit"),
 });
 
 export const CategorySchema = Yup.object({

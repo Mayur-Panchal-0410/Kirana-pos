@@ -1,68 +1,58 @@
-.sidebar {
-  width: 100%; /* Sidebar will take full width of its column */
-  background-color: #333;
-  height: 100%;
-  transition: width 0.3s;
-  
+.Sidebar {
+  transition: width 0.3s ease-in-out;
+  background-color: #1e262b;
+  position: relative;
 }
 
-.sidebar.open {
-  width: 100%; /* Adjust for the expanded state */
-}
-
-.sidebar .toggle_button {
-  padding: 10px;
-  margin-left: 60px;
-}
-
-.sidebar.open .sidebar_items {
-  margin-top: 20px;
-  padding-inline: 20px;
+.Sidebar-heading {
+  margin: 0;
+  /* padding: 20px; */
+  background-color: #37474f;
   text-align: center;
-
-}
-.sidebar.close .sidebar_items {
-  margin-top: 20px;
-  display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
+  color: #fff;
+  font-weight: bold;
+  transition: display 0.3s ease-in-out;
 }
 
-.sidebar_item {
-  padding: 15px;
-  display: flex;
-  align-items: center;
-  color: white;
+.Sidebar-open {
+  width: 230px;
+  height: 100vh;
 }
 
-.sidebar_item p {
-  margin-left: 10px;
-  margin-top: 15px;
-  
+.Sidebar-close {
+  width: 80px;
+  height: 100vh;
 }
 
-.sidebar_item i {
-  color: white;
-}
-
-.sidebar_item:hover {
-  background-color: #575757;
+.Sidebar-toggleButton {
+  position: absolute;
+  top: 15px; /* Position it near the top */
+  left: 95%;
+  transform: translateX(-50%); /* Center it horizontally */
+  background: none;
+  border: none;
   cursor: pointer;
 }
 
+.Sidebar-items {
+  display: flex;
+  flex-direction: column;
+  padding-top: 20px;
+}
 
-/* .sidebar.open .sidebar_item {
-    flex-direction: row;
-    justify-content: flex-start;
-    padding-left: 20px;
-  } */
-  
-  .sidebar.open .sidebar_item i {
-    margin-right: 10px;
-    font-size: 20px; /* Adjust icon size when sidebar is open */
-  }
-  .sidebar.close .sidebar_item i {
-    font-size: 20px; /* Adjust icon size when sidebar is open */
-    
-  }
+.SidebarItem {
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  color: #fff;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.SidebarItem:hover {
+  background-color: #455a64;
+}
+
+.SidebarItem span {
+  margin-left: 10px;
+}
